@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+}
+main{
+    width: 100%;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+}
+.ham-menu{
+    display: none;
+}
+nav{
+    display: flex;
+    position: relative;
+}
+.menu{
+    padding: 0em 1em 0em 1em;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+    margin-left: 1em;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 0em 1em 0em 1em;
+    color: hsl(0, 0%, 41%);
+}
+.menu ul li:hover{
+    color: hsl(0, 0%, 8%);
+}
+.menu ul li img{
+    margin-left: 0.5em;
+}
+.nav-btn{
+    display: flex;
+    align-items: center;
+    margin-left: 30em;
+}
+.nav-btn button{
+    padding: 0.75em 1.5em 0.75em 1.5em;
+    border: 2px solid hsl(0, 0%, 8%);
+    border-radius: 0.75em;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Epilogue', sans-serif;
+}
+.nav-btn button:nth-child(1){
+    border: none;
+}
+.features-drop{
+    position: absolute;
+    width: 8.7em;
+    border-radius: 0.5em;
+    box-shadow: 0px 1px 10px 1px hsl(0, 0%, 41%);
+    transform: translate(0%, 35%);
+    display: ;
+}
+#drop-down-features:hover .drop-down-company{
+    background-color: red;
+    display: block;
+}
+.features-drop ul li{
+    list-style: none;
+    padding: 0.3em 1em;
+}
+.features-drop ul li img{
+    padding-right: 0.5em;
+}
+.company-drop{
+    position: absolute;
+    width: 7em;
+    border-radius: 0.5em;
+    box-shadow: 0px 1px 10px 1px hsl(0, 0%, 41%);
+    transform: translate(160%, 45%);
+}
+.company-drop ul li{
+    list-style: none;
+    padding: 0.3em 1em;
+}
+.hidden{
+    display: none;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+.hero-img{
+    width: 25em;
+}
+.main-text{
+    width: 30em;
+    margin-right: 3em;
+    padding-top: 2em;
+}
+.main-text h3{
+    font-size: 4.5em;
+    color: hsl(0, 0%, 8%);
+}
+.main-text p{
+    letter-spacing: 0.05em;
+}
+.main-text button{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    margin-top: 1em;
+    padding: 0.75em 2em 0.75em 2em;
+    background-color:hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border-radius: 0.75em;
+    cursor: pointer;
+}
+.main-text button:hover{
+    box-shadow: none;
+    background-color: transparent;
+    color: hsl(0, 0%, 8%);
+    transition: 0.2s ease-in-out;
+}
+.client-logo{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 375px) {
+    .nav-bar{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-content{
+        flex-direction: column-reverse;
+    }
+    .main-content img{
+        width: 19.5em;
+    }
+    .main-text{
+        width: 19.5em;
+        padding-top: 1em;
+        text-align: center;
+    }
+    .main-text h3{
+        font-size: 1.7em;
+    }
+    .main-text p{
+        letter-spacing: 0.07em;
+        line-height: 1.5em;
+    }
+    .nav-bar{
+        display: flex;
+        align-items: center;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+    }
+    nav{
+        display: none;
+        flex-direction: column;
+    }
+    .ham-menu{
+        display: block;
+        margin-right: 1em;
+    }
+}
