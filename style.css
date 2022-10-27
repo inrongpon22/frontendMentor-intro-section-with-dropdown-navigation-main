@@ -18,6 +18,9 @@ main{
 .nav-bar{
     display: flex;
     align-items: center;
+    position: relative;
+}
+.nav-bar a img{
     padding-left: 2em;
 }
 .ham-menu{
@@ -61,8 +64,17 @@ nav{
     font-weight: 700;
     font-family: 'Epilogue', sans-serif;
 }
+.nav-btn button:hover{
+    background-color:hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    transition: 0.2s ease-in-out;
+}
 .nav-btn button:nth-child(1){
     border: none;
+}
+.nav-btn button:nth-child(1):hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 8%);
 }
 .features-drop{
     position: absolute;
@@ -79,6 +91,10 @@ nav{
 .features-drop ul li{
     list-style: none;
     padding: 0.3em 1em;
+    cursor: pointer;
+}
+.features-drop ul li:hover{
+    color: black;
 }
 .features-drop ul li img{
     padding-right: 0.5em;
@@ -93,6 +109,10 @@ nav{
 .company-drop ul li{
     list-style: none;
     padding: 0.3em 1em;
+    cursor: pointer;
+}
+.company-drop ul li:hover{
+    color: black;
 }
 .hidden{
     display: none;
@@ -140,16 +160,16 @@ nav{
     align-items: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
     .nav-bar{
-        justify-content: space-between;
+        justify-content: start;
         align-items: center;
     }
-    .main-content{
-        flex-direction: column-reverse;
+    .nav-bar a img{
+        padding-left: 0em;
     }
     .main-content img{
-        width: 19.5em;
+        width: 18em;
     }
     .main-text{
         width: 19.5em;
@@ -157,24 +177,121 @@ nav{
         text-align: center;
     }
     .main-text h3{
-        font-size: 1.7em;
+        font-size: 2.9em;
+        text-align: start;
     }
     .main-text p{
+        text-align: start;
         letter-spacing: 0.07em;
         line-height: 1.5em;
     }
     .nav-bar{
+        width: 100vh;
+    }
+    .features-drop{
+        left: -2.5em;
+    }
+    .features-drop ul li{
+        font-size: 14px;
+    }
+    .company-drop{
+        left: -4em;
+    }
+    .company-drop ul li{
+        font-size: 14px;
+    }
+    .menu ul li{
+        font-size: 14px;
         display: flex;
         align-items: center;
-        padding-left: 0.5em;
-        padding-top: 0.5em;
     }
+    .nav-btn{
+        margin-left: 12em;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar{
+        justify-content: start;
+        align-items: center;
+    }
+    .main-content img{
+        width: 18em;
+    }
+    .main-text{
+        width: 19.5em;
+        padding-top: 1em;
+        text-align: center;
+    }
+    .main-text h3{
+        font-size: 2.9em;
+        text-align: start;
+    }
+    .main-text p{
+        text-align: start;
+        letter-spacing: 0.07em;
+        line-height: 1.5em;
+    }
+    .nav-bar{
+        width: 100vh;
+    }
+    .features-drop{
+        left: -2.5em;
+    }
+    .features-drop ul li{
+        font-size: 14px;
+    }
+    .company-drop{
+        left: -4em;
+    }
+    .company-drop ul li{
+        font-size: 14px;
+    }
+    .menu ul li{
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-btn{
+        margin-left: 0.5em;
+    }
+}
+
+/* @media (max-width: 640px) {
     nav{
-        display: none;
+        display: block;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        z-index: -3;
+        right: 0;
+    }
+    .menu ul{
         flex-direction: column;
     }
     .ham-menu{
         display: block;
         margin-right: 1em;
     }
-}
+    .nav-bar{
+        justify-content: space-between;
+    }
+    .main-content{
+        flex-direction: column-reverse;
+    }
+    .main-content img{
+        width: 100%;
+        z-index: 10;
+    }
+    .main-text{
+        width: 100%;
+    }
+    .main-text h3{
+        text-align: center;
+    }
+    .main-text p{
+        padding: 0 2em 0 2em;
+        text-align: center;
+        font-size: 24px;
+    }
+} */
